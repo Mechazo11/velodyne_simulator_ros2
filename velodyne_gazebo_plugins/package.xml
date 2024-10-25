@@ -18,6 +18,7 @@
 
   <build_depend>gz-cmake3</build_depend>
   <build_depend>gz-msgs10</build_depend>
+  <build_depend>gz-physics7</build_depend>
   <build_depend>gz-sim8</build_depend>
   <build_depend>gz-sensors8</build_depend>
   <build_depend>ros_gz_sim</build_depend>
@@ -26,6 +27,7 @@
 
   <exec_depend>gz-cmake3</exec_depend>
   <exec_depend>gz-msgs10</exec_depend>
+  <exec_depend>gz-physics7</exec_depend>
   <exec_depend>gz-sim8</exec_depend>
   <exec_depend>gz-sensors8</exec_depend>
   <exec_depend>ros_gz_bridge</exec_depend>

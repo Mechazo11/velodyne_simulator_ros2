@@ -34,21 +34,8 @@ POSSIBILITY OF SUCH DAMAGE.
 /**
  * Includes
  */
+// Moved all includes in one place
 #include <velodyne_gazebo_plugins/GazeboRosVelodyneLaser.h>
-// C++
-#include <algorithm>
-#include <iterator>
-#include <sstream>
-#include <vector>
-#include <string>
-// Ignition / Gazebo Harmonic
-#include <ignition/math/Angle.hh>
-#include <ignition/math/Quaternion.hh>
-#include <ignition/math/Vector3.hh>
-#include <gazebo/physics/MultiRayShape.hh>
-#include <gazebo/sensors/GpuRaySensor.hh>
-#include <gazebo/sensors/RaySensor.hh>
-#include <gazebo/sensors/Sensor.hh>
 
 namespace gazebo
 {

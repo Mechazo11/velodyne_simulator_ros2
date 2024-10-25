@@ -36,6 +36,7 @@ add_library(gazebo_ros_velodyne_laser SHARED src/GazeboRosVelodyneLaser.cpp)
 ament_target_dependencies(gazebo_ros_velodyne_laser
   "gz-cmake3"
   "gz-msgs10"
+  "gz-physics7"
   "gz-sim8"
   "gz-sensors8"
   "ros_gz_bridge"
@@ -49,6 +50,7 @@ ament_export_include_directories(include)
 ament_export_dependencies(rclcpp)
 ament_export_dependencies(gz-cmake3)
 ament_export_dependencies(gz-msgs10)
+ament_export_dependencies(gz-physics7)
 ament_export_dependencies(gz-sim8)
 ament_export_dependencies(gz-sensors8)
 ament_export_dependencies(ros_gz_bridge)

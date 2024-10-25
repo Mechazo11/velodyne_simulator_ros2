@@ -37,12 +37,20 @@ POSSIBILITY OF SUCH DAMAGE.
 /**
  * Includes
  */
-#include <string>
+
+// C++
+#include <algorithm>
+#include <iterator>
+#include <sstream>
 #include <vector>
+#include <string>
 
 #include <sdf/Param.hh>
 
+// Ignition / Gazebo Harmonic
 #include <ignition/math/Angle.hh>
+#include <ignition/math/Quaternion.hh>
+#include <ignition/math/Vector3.hh>
 
 // #include <gazebo/transport/Node.hh> // Depricate, for gazebo classic
 #include "gz/transport.hh"
@@ -54,7 +62,9 @@ POSSIBILITY OF SUCH DAMAGE.
 #include <gz/msgs/any.pb.h>
 
 // #include <gazebo/sensors/SensorTypes.hh> // Depricate, for gazebo classic
+// #include <gz/physics/MultiRay.hh> // What is its equivalent?
 #include <gz/sensors/Sensor.hh>
+#include <gz/sensors/GpuLidarSensor.hh>
 
 #include <sensor_msgs/msg/point_cloud2.hpp>
 
