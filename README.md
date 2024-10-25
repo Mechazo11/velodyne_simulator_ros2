@@ -1,7 +1,14 @@
 # Velodyne Simulator
+
 URDF description and Gazebo plugins to simulate Velodyne laser scanners
 
+Updated to work with Gazebo Harmonic by [Azmyin Md. Kamal](https://mechazo11.github.io/)
+
 ![rviz screenshot](img/rviz.png)
+
+## Useful resources for integating Gazebo Harmonic
+
+* find package syntax: https://github.com/gazebosim/gz-harmonic/blob/main/CMakeLists.txt
 
 # Features
 * URDF with colored meshes

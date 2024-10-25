@@ -9,22 +9,23 @@
   <license>BSD</license>
   <author>Kevin Hallenbeck</author>
   <maintainer email="khallenbeck@dataspeedinc.com">Kevin Hallenbeck</maintainer>
-  <url type="website">http://wiki.ros.org/velodyne_gazebo_plugins</url>
-  <url type="repository">https://bitbucket.org/dataspeedinc/velodyne_simulator</url>
-  <url type="bugtracker">https://bitbucket.org/dataspeedinc/velodyne_simulator/issues</url>
+  <maintainer email="azmyin12@gmail.com">Azmyin Md. Kamal</maintainer>
+  <url type="repository">https://github.com/Mechazo11/velodyne_simulator_ros2.git</url>
 
   <buildtool_depend>ament_cmake</buildtool_depend>
 
   <depend>tf2</depend>
 
-  <build_depend>gazebo_dev</build_depend>
-  <build_depend>gazebo_msgs</build_depend>
-  <build_depend>gazebo_ros</build_depend>
+  <build_depend>gz-cmake3</build_depend>
+  <build_depend>gz-msgs10</build_depend>
+  <build_depend>ros_gz_sim</build_depend>
+  <build_depend>ros_gz_bridge</build_depend>
   <build_depend>rclcpp</build_depend>
 
-  <exec_depend>gazebo_dev</exec_depend>
-  <exec_depend>gazebo_msgs</exec_depend>
-  <exec_depend>gazebo_ros</exec_depend>
+  <exec_depend>gz-cmake3</exec_depend>
+  <exec_depend>gz-msgs10</exec_depend>
+  <exec_depend>ros_gz_bridge</exec_depend>
+  <exec_depend>ros_gz_sim</exec_depend>
   <exec_depend>rclcpp</exec_depend>
 
   <export>
