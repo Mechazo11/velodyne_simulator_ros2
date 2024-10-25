@@ -54,6 +54,8 @@ POSSIBILITY OF SUCH DAMAGE.
 
 // #include <gazebo/transport/Node.hh> // Depricate, for gazebo classic
 #include "gz/transport.hh"
+// #include <gz/transport/Node.hh>
+// #include <gz/transport/Subscription.hh>
 
 // #include <gazebo/common/Plugin.hh> // Depricate, for gazebo classic
 #include <gz/sim/System.hh>
@@ -71,6 +73,8 @@ POSSIBILITY OF SUCH DAMAGE.
 
 // #include <gazebo_ros/node.hpp> // Depricated, for gazebo classic
 #include <ros_gz_bridge/ros_gz_bridge.hpp>
+
+
 
 namespace gazebo
 {
@@ -133,7 +137,8 @@ namespace gazebo
     // private: sensors::SensorPtr parent_sensor_;
     private: gz::sensors::SensorPtr parent_sensor_;
 
-    private: gazebo_ros::Node::SharedPtr ros_node_;
+    // private: gazebo_ros::Node::SharedPtr ros_node_; // Used by a Gazebo Classic plugin to create and manage a ROS node. 
+    rclcpp::Node::SharedPtr ros_node_;
 
     /// \brief ROS publisher
     private: rclcpp::Publisher<sensor_msgs::msg::PointCloud2>::SharedPtr pub_;
@@ -173,8 +178,12 @@ namespace gazebo
     private: std::string robot_namespace_;
 
     // Subscribe to gazebo laserscan
-    private: gazebo::transport::NodePtr gazebo_node_;
-    private: gazebo::transport::SubscriberPtr sub_;
+    // private: gazebo::transport::NodePtr gazebo_node_;
+    // private: gazebo::transport::SubscriberPtr sub_;
+
+    // Compatible with new Ignition / Gazebo Harmonic
+    private: gz::transport::Node gazebo_node_;
+    private: gz::transport::Node::Subscriber sub_;
     private: void OnScan(const ConstLaserScanStampedPtr &_msg);
 
   };
