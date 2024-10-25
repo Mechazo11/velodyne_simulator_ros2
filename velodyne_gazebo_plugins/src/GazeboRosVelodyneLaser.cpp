@@ -106,7 +106,7 @@ GazeboRosVelodyneLaser::SampleAngleInterval(sdf::ElementPtr _sdf,
   return SampleAngleIntervalEvenly(_min_angle, _max_angle, _sample_count);
 }
 
-void GazeboRosVelodyneLaser::LoadScanPattern(sensors::SensorPtr _parent, sdf::ElementPtr _sdf) {
+void GazeboRosVelodyneLaser::LoadScanPattern(gz::sensors::SensorPtr _parent, sdf::ElementPtr _sdf) {
   sensors::GpuRaySensorPtr parent_gpu_ray_sensor = std::dynamic_pointer_cast<sensors::GpuRaySensor>(_parent);
   if (parent_gpu_ray_sensor) {
     if (_sdf->HasElement("scan")) {
@@ -207,7 +207,8 @@ void GazeboRosVelodyneLaser::LoadScanPattern(sensors::SensorPtr _parent, sdf::El
 
 ////////////////////////////////////////////////////////////////////////////////
 // Load the controller
-void GazeboRosVelodyneLaser::Load(sensors::SensorPtr _parent, sdf::ElementPtr _sdf)
+//void GazeboRosVelodyneLaser::Load(sensors::SensorPtr _parent, sdf::ElementPtr _sdf)
+void GazeboRosVelodyneLaser::Load(gz::sensors::SensorPtr _parent, sdf::ElementPtr _sdf)
 {
   gzdbg << "Loading GazeboRosVelodyneLaser\n";
 

@@ -64,6 +64,7 @@ POSSIBILITY OF SUCH DAMAGE.
 // #include <gazebo/sensors/SensorTypes.hh> // Depricate, for gazebo classic
 // #include <gz/physics/MultiRay.hh> // What is its equivalent?
 #include <gz/sensors/Sensor.hh>
+#include <gz/sensors/SensorTypes.hh> // Needed for gz::sensors::Sensor
 #include <gz/sensors/GpuLidarSensor.hh>
 
 #include <sensor_msgs/msg/point_cloud2.hpp>
@@ -74,7 +75,7 @@ POSSIBILITY OF SUCH DAMAGE.
 namespace gazebo
 {
 
-  class GazeboRosVelodyneLaser : public SensorPlugin
+  class GazeboRosVelodyneLaser : public gz::sensors::Sensor
   {
     struct ScanPattern {
       struct Sample {
@@ -101,12 +102,13 @@ namespace gazebo
 
     /// \brief Load the plugin
     /// \param take in SDF root element
-    public: void Load(sensors::SensorPtr _parent, sdf::ElementPtr _sdf);
+    // public: void Load(sensors::SensorPtr _parent, sdf::ElementPtr _sdf);
+    void Load(gz::sensors::SensorPtr _parent, sdf::ElementPtr _sdf);
 
     /// \brief Load scan pattern
     /// \param _parent Parent (gpu) ray sensor
     /// \param _sdf Root sensor plugin SDF element
-    private: void LoadScanPattern(sensors::SensorPtr _parent, sdf::ElementPtr _sdf);
+    private: void LoadScanPattern(gz::sensors::SensorPtr _parent, sdf::ElementPtr _sdf);
 
     /// \brief Sample angle interval evenly
     /// \param _min_angle Angle interval lower bound
@@ -128,7 +130,8 @@ namespace gazebo
     private: void ConnectCb();
 
     /// \brief The parent ray sensor
-    private: sensors::SensorPtr parent_sensor_;
+    // private: sensors::SensorPtr parent_sensor_;
+    private: gz::sensors::SensorPtr parent_sensor_;
 
     private: gazebo_ros::Node::SharedPtr ros_node_;
 

@@ -9,6 +9,7 @@ Updated to work with Gazebo Harmonic by [Azmyin Md. Kamal](https://mechazo11.git
 ## Useful resources for integating Gazebo Harmonic
 
 * find package syntax: https://github.com/gazebosim/gz-harmonic/blob/main/CMakeLists.txt
+* Adding custom sensor plugin: https://robotics.stackexchange.com/questions/108482/how-to-add-a-custom-sensor-plugin
 
 # Features
 * URDF with colored meshes
