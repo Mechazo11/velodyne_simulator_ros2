@@ -14,6 +14,7 @@ endif()
 find_package(ament_cmake REQUIRED)
 find_package(gz-cmake3 REQUIRED)
 find_package(gz-msgs10 REQUIRED)
+find_package(gz-sim8 REQUIRED)
 find_package(ros_gz_bridge REQUIRED)
 find_package(ros_gz_sim REQUIRED)
 find_package(rclcpp REQUIRED)
@@ -35,6 +36,7 @@ add_library(gazebo_ros_velodyne_laser SHARED src/GazeboRosVelodyneLaser.cpp)
 ament_target_dependencies(gazebo_ros_velodyne_laser
   "gz-cmake3"
   "gz-msgs10"
+  "gz-sim8"
   "ros_gz_bridge"
   "ros_gz_sim"
   "rclcpp"
@@ -46,6 +48,7 @@ ament_export_include_directories(include)
 ament_export_dependencies(rclcpp)
 ament_export_dependencies(gz-cmake3)
 ament_export_dependencies(gz-msgs10)
+ament_export_dependencies(gz-sim8)
 ament_export_dependencies(ros_gz_bridge)
 ament_export_dependencies(ros_gz_sim)
 ament_export_dependencies(sensor_msgs)
