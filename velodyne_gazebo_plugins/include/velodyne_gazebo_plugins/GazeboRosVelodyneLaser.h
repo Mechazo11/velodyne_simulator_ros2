@@ -61,7 +61,8 @@ POSSIBILITY OF SUCH DAMAGE.
 #include <gz/sim/System.hh>
 
 // #include <gazebo/msgs/MessageTypes.hh> // Depricate, for gazebo classic
-#include <gz/msgs/any.pb.h>
+// #include <gz/msgs/any.pb.h>
+#include <gz/msgs.hh>
 
 // #include <gazebo/sensors/SensorTypes.hh> // Depricate, for gazebo classic
 // #include <gz/physics/MultiRay.hh> // What is its equivalent?
@@ -183,7 +184,7 @@ namespace gazebo
 
     // Compatible with new Ignition / Gazebo Harmonic
     private: gz::transport::Node gazebo_node_;
-    private: gz::transport::Node::Subscriber sub_;
+    private: gz::transport::Node sub_;
     private: void OnScan(const ConstLaserScanStampedPtr &_msg);
 
   };
